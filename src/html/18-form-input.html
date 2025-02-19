@@ -8,20 +8,88 @@
   <body>
     <h1>form 관련 요소</h1>
     <h2>input 요소</h2>
-    <form action="/">
+    <form action="https://formspree.io/f/xeqwwbwk" method="post">
       <fieldset>
         <legend>폼 서식</legend>
         <div>
           <label for="userName">이름</label>
-          <input type="text" id="userName" />
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            minlength="3"
+            maxlength="5"
+            required
+            placeholder="예) 홍길동"
+          />
+        </div>
+        <div role="form">
+          <div
+            aria-required="true"
+            contenteditable="true"
+            style="border: 1px solid red; height: 20px; width: 100px"
+          ></div>
         </div>
         <div>
           <label for="userPwd">비밀번호</label>
-          <input type="password" id="userPwd" />
+          <input type="password" name="userPwd" id="userPwd" required />
         </div>
         <div>
           <label for="likelionSearch">검색</label>
-          <input type="search" id="likelionSearch" />
+          <input type="search" name="likelionSearch" id="likelionSearch" />
+        </div>
+        <div>
+          <label for="userEmail">이메일</label>
+          <input type="email" name="userEmail" id="userEmail" required />
+        </div>
+        <div>
+          <label for="userPhone">연락처</label>
+          <input type="tel" name="userPhone" id="userPhone" required />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            value="html"
+            checked
+            name="classLikeLion"
+            id="classHtml"
+          />
+          <label for="classHtml">HTML</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            value="css"
+            name="classLikeLion"
+            id="classCSS"
+          />
+          <label for="classCSS">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" value="js" name="classLikeLion" id="classJs" />
+          <label for="classJs">JS</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom1"
+            checked
+            name="classRoom"
+            id="classRoom1"
+          />
+          <label for="classRoom1">회고 1팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom2"
+            name="classRoom"
+            id="classRoom2"
+          />
+          <label for="classRoom2">회고 2팀</label>
+        </div>
+        <div>
+          <input type="submit" value="전송" />
         </div>
       </fieldset>
     </form>
